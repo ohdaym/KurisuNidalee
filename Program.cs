@@ -796,13 +796,13 @@ namespace KurisuNidalee
                     }
                 }
 
-                if (TargetHunted(m) & m.Distance(Me.ServerPosition, true) <= 750*750 && (CW == 0 || Pounce.IsReady()))
+				if (TargetHunted(m) & m.Distance(Me.ServerPosition, true) <= 750*750 & m.Distance(Me.ServerPosition, true) >= 125 && (CW == 0 || Pounce.IsReady()))
                 {
                     if (_mainMenu.Item("jgcougarw").GetValue<bool>())
                         Pounce.Cast(m.ServerPosition);
                 }
 
-                else if (m.Distance(Me.ServerPosition, true) <= 400*400 && (CW == 0 || Pounce.IsReady()))
+				else if (m.Distance(Me.ServerPosition, true) <= 400*400 & m.Distance(Me.ServerPosition, true) >= 125 && (CW == 0 || Pounce.IsReady()))
                 {
                     if (_mainMenu.Item("jgcougarw").GetValue<bool>())
                         Pounce.Cast(m.ServerPosition);
